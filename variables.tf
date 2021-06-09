@@ -1,3 +1,11 @@
+variable "vpc" {
+  description = "vpc the resources are deployed into"
+}
+
+variable "subnet" {
+  descripton = "subnet the resources are deployed into"
+}
+
 variable "web" {
   description = "set to true to include web tier"
   default = false

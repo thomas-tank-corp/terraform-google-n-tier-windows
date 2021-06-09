@@ -13,10 +13,9 @@ resource "google_compute_instance_template" "database" {
     type         = "PERSISTENT"
   }
 
-  network_interface {
-    network = google_compute_network.vpc.self_link
-    subnetwork = google_compute_subnetwork.subnet.self_link
-
+   network_interface {
+    network = var.vpc
+    subnetwork = var.subnet
   }
 
   metadata_startup_script = var.database_startup_script

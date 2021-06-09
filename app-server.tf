@@ -14,8 +14,8 @@ resource "google_compute_instance_template" "app_server" {
   }
 
   network_interface {
-    network = google_compute_network.vpc.self_link
-    subnetwork = google_compute_subnetwork.subnet.self_link
+    network = var.vpc
+    subnetwork = var.subnet
   }
 
   metadata_startup_script = var.app_startup_script
