@@ -1,9 +1,9 @@
 variable "vpc" {
-  description = "vpc the resources are deployed into"
+  description = "existing vpc the resources are deployed into"
 }
 
 variable "subnet" {
-  descripton = "subnet the resources are deployed into"
+  descripton = "existing subnet the resources are deployed into"
 }
 
 variable "web" {
@@ -21,7 +21,9 @@ variable "database" {
   default = false
 }
 
-variable "project" {}
+variable "project" {
+  description = "Existing GCP project to deploy into"
+}
 
 
 variable "prefix" {
@@ -86,8 +88,8 @@ variable "labels" {
   description = "labels (tags) to apply to the instance"
   type        = map(string)
   default = {
-    "os"   = "windows"
-    "tier" = "3"
+    "os"   = ""
+    "tier" = ""
   }
 }
 
@@ -116,15 +118,16 @@ variable "subnet_range" {
 }
 
 variable "web_startup_script" {
+  description = "bash startup script for webserver"
   default = ""
 }
 
 variable "app_startup_script" {
+  description = "bash startup script for app server"
   default = ""
 }
 
 variable "database_startup_script" {
-  default = ""
+    description = "bash startup script for database server"
+    default = ""
 }
-
-
