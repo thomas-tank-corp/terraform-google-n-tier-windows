@@ -3,7 +3,7 @@ variable "vpc" {
 }
 
 variable "subnet" {
-  descripton = "existing subnet the resources are deployed into"
+  description = "existing subnet the resources are deployed into"
 }
 
 variable "web" {

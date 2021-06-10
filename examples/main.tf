@@ -1,6 +1,6 @@
-module "windows-n-tier" {
-  source  = "app.terraform.io/tom-se-hashi/windows-n-tier/google"
-  version = "0.2.0"
+module "n-tier-windows" {
+  source  = "app.terraform.io/tom-se-hashi/n-tier-windows/google"
+  version = "0.1.0"
   project      = "gcp-project"
   prefix       = "test"
   region       = "europe-west2"
